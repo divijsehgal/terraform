@@ -1,20 +1,14 @@
-terraform {
-	  backend "s3" {
-    bucket = "fg-bucket-03"
-    key    = "dyuti/awstest/terraform.tfstate"
-  }
-}
-
 provider "aws" {
-region = "us-east-1"
+  region = "us-east-1"
+
 }
 
-resource "aws_s3_bucket" "fd_bucket" {
-  bucket = "fd-018-bucket"  # Replace with your desired bucket name
-  acl    = "private"
+resource "aws_instance" "instance1" {
+  ami           = "ami-08a0d1e16fc3f61ea"
+  instance_type = "t2.micro"
+
+  tags = {
+    name = "My-Demo-Instances"
   }
 
-output "s3_bucket_id" {
-  description = "The name of the bucket."
-  value       = aws_s3_bucket.fd_bucket.id
 }
