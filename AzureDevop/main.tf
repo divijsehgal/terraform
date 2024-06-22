@@ -7,6 +7,11 @@ terraform {
   }
 }
 
+provider "azuredevops" {
+  org_service_url = "${{ADODIVIJ:FDAZ_DEVOPS_ORGANIZATION}}"
+  personal_access_token = "${{ADODIVIJ:FDAZ_DEVOPS_PERSONAL_ACCESS_TOKEN}}"
+}
+
 resource "azuredevops_project" "project" {
   name        = "ProjectFDTF"
   description = "Project From FlexDeploy"
