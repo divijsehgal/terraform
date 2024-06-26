@@ -11,3 +11,7 @@ provider "azuredevops" {
   org_service_url = "${{ADODIVIJ:FDAZ_DEVOPS_ORGANIZATION}}"
   personal_access_token = "${{ADODIVIJ:FDAZ_DEVOPS_PERSONAL_ACCESS_TOKEN}}"
 }
+
+provider "aws" {
+  region = "us-east-1"
+}
