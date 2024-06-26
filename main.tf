@@ -18,6 +18,6 @@ resource "aws_instance" "example_instance" {
 
 }
 
-outputs "instance_id" {
+output "instance_id" {
   value = aws_instance.example_instance.id
 }
