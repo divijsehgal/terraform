@@ -15,7 +15,11 @@ resource "aws_instance" "example_instance" {
   tags = {
     name = "My-Demo-Instances"
   }
-
+}
+ 
+resource "azuredevops_project" "project" {
+  name        = "ProjectFDTF"
+  description = "Project From FlexDeploy"
 }
 
 output "instance_id" {
