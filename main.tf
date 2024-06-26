@@ -10,10 +10,14 @@ resource "aws_s3_bucket" "example_bucket" {
 
 resource "aws_instance" "example_instance" {
   ami           = "ami-08a0d1e16fc3f61ea"
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
 
   tags = {
     name = "My-Demo-Instances"
   }
 
+}
+
+outputs "instance_id" {
+  value = aws_instance.example_instance.id
 }
