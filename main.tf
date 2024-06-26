@@ -4,7 +4,7 @@ variable "instance_type" {
 }
 
 resource "aws_s3_bucket" "example" {
-  bucket = "flexdeploy-test-bucket"
+  bucket = "flexdeploy-test-bucket2"
 }
 
 resource "aws_instance" "example_instance" {
