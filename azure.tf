@@ -1,4 +1,4 @@
 resource "azuredevops_project" "project" {
-  name        = "ProjectFDTF"
+  name        = "ProjectFDTF2"
   description = "Project From FlexDeploy"
 }
